@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls", "delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.veto.app",
+      "sha256_cert_fingerprints": ["98:B2:6A:5C:52:68:05:0F:61:66:81:B4:7F:C6:95:2D:DF:7B:03:E2:D8:BB:6D:F2:17:42:68:A8:11:FF:65:73"]
+    }
+  }
+]
