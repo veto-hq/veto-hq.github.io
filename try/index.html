@@ -95,7 +95,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);o
 
 <section aria-labelledby="demo">
 <h2 id="demo">Keep it running: get charges from our demo agent</h2>
-<p>Our demo agent asks every rule that names it to pay for a small electric car top-up (6 kWh) every six hours. The amount follows the Swedish electricity spot price, so it changes with the hour. On 29 September 2026 it was about 0.75 USDC.</p>
+<p>Our demo agent asks every rule that names it to pay for a small electric car top-up (6 kWh) every six hours. The amount follows the Swedish electricity spot price, so it changes with the hour. On 29 September 2026 it ranged from about 0.75 to 1.21 USDC.</p>
 <ol>
 <li><span class="step">Write a rule for the demo agent.</span>
 <p>Open <strong>Rules</strong>, tap <strong>Write a rule</strong> and keep <strong>Payment rule</strong>. Paste this in <strong>Agent</strong>:</p>
@@ -115,8 +115,8 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);o
 </ol>
 <p>What to expect:</p>
 <ul>
-<li>A request at 00:00, 06:00, 12:00 and 18:00 Stockholm time.</li>
-<li>Cheaper hours are paid. Pricier hours ask for more than 1 USDC and are refused, and nothing moves. You see both.</li>
+<li>A request around 00:00, 06:00, 12:00 and 18:00 Stockholm time. It can arrive later than that, and no request is sent when there is no price.</li>
+<li>Cheaper hours are paid. Pricier hours ask for more than 1 USDC and are refused, and nothing moves. On most days you see both.</li>
 <li>A notification on your phone when a request is paid or refused, if you allow notifications (<strong>Turn notifications on</strong> on the Overview screen). The phone checks about every 15 minutes, and battery saving can delay it.</li>
 <li>To end the requests, open the rule and use <strong>Stop the rule</strong>.</li>
 </ul>
