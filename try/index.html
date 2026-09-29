@@ -25,6 +25,7 @@ strong{color:var(--text);font-weight:600}
 code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);overflow-wrap:anywhere}
 .step{display:block;color:var(--text);font-weight:600}
 .notice{border-left:2px solid var(--brass);padding:12px 16px;color:var(--text)}
+.addr{display:block;margin:8px 0 0;padding:10px 12px;border:1px solid var(--muted);border-radius:4px;user-select:all;-webkit-user-select:all}
 .button{display:inline-block;max-width:100%;padding:14px 20px;background:var(--brass);color:var(--bg);font-weight:600;text-align:center;text-decoration:none;border-radius:4px}
 .button:hover{text-decoration:underline}
 @media(max-width:400px){body{padding:28px 16px}}
@@ -90,6 +91,36 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);o
 </li>
 </ol>
 <p>That refusal is the point: the agent asked for more than you allowed, and the chain said no. No money moved for it.</p>
+</section>
+
+<section aria-labelledby="demo">
+<h2 id="demo">Keep it running: get charges from our demo agent</h2>
+<p>Our demo agent asks every rule that names it to pay for a small electric car top-up (6 kWh) every six hours. The amount follows the Swedish electricity spot price, so it changes with the hour. On 29 September 2026 it was about 0.75 USDC.</p>
+<ol>
+<li><span class="step">Write a rule for the demo agent.</span>
+<p>Open <strong>Rules</strong>, tap <strong>Write a rule</strong> and keep <strong>Payment rule</strong>. Paste this in <strong>Agent</strong>:</p>
+<code class="addr">6YwqYUj4Kyy8dnPss34jMWgKAtLGAghmA1dRgYUGSV5w</code>
+</li>
+<li><span class="step">Set the payee and the limits.</span>
+<p>Paste this in <strong>Payee</strong>. The demo agent skips rules with any other payee.</p>
+<code class="addr">6i99pFwsoV9wBWSaNtXxpXgCWjpCkMbZ4UE6T4cSPdCG</code>
+<ul>
+<li><strong>Most per payment</strong>: 1</li>
+<li><strong>Most in total, ever</strong>: 10 (these 10 USDC move into the rule's own account, so get more from the faucet first if you need to)</li>
+</ul>
+</li>
+<li><span class="step">Approve it.</span>
+<p><strong>Press and hold to approve rule</strong> and approve in your wallet.</p>
+</li>
+</ol>
+<p>What to expect:</p>
+<ul>
+<li>A request at 00:00, 06:00, 12:00 and 18:00 Stockholm time.</li>
+<li>Cheaper hours are paid. Pricier hours ask for more than 1 USDC and are refused, and nothing moves. You see both.</li>
+<li>A notification on your phone when a request is paid or refused, if you allow notifications (<strong>Turn notifications on</strong> on the Overview screen). The phone checks about every 15 minutes, and battery saving can delay it.</li>
+<li>To end the requests, open the rule and use <strong>Stop the rule</strong>.</li>
+</ul>
+<p class="notice"><strong>This is devnet test money with no value, like everything else on this page.</strong></p>
 </section>
 
 <section aria-labelledby="trouble">
