@@ -117,6 +117,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);o
 <ul>
 <li>A request around 00:00, 06:00, 12:00 and 18:00 Stockholm time. It can arrive later than that, and no request is sent when there is no price.</li>
 <li>Cheaper hours are paid. Pricier hours ask for more than 1 USDC and are refused, and nothing moves. On most days you see both.</li>
+<li>If a request is refused for going over your per-payment limit, open that decision and <strong>press and hold to allow this one payment</strong>. The demo agent sends the same request again on its next run (00:00, 06:00, 12:00 or 18:00 Stockholm time, so within six hours) and it is paid once. Your limit stays the same.</li>
 <li>A notification on your phone when a request is paid or refused, if you allow notifications (<strong>Turn notifications on</strong> on the Overview screen). The phone checks about every 15 minutes, and battery saving can delay it.</li>
 <li>To end the requests, open the rule and use <strong>Stop the rule</strong>.</li>
 </ul>
