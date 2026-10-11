@@ -43,7 +43,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);o
 <section aria-labelledby="need">
 <h2 id="need">What you need</h2>
 <ul>
-<li>A Seeker, or another Android phone with a Solana wallet that supports Mobile Wallet Adapter (Seed Vault on Seeker).</li>
+<li>A Seeker with its own wallet (Seed Vault). On this build, Phantom and Solflare can connect but cannot approve a rule, so other Android phones cannot finish the steps yet. The fixes are tracked in the repo (<a href="https://github.com/Arlencho/veto/issues/410">410</a>, <a href="https://github.com/Arlencho/veto/issues/412">412</a>).</li>
 <li>That wallet set to <strong>devnet</strong>.</li>
 <li>About 5 minutes. Faucets and confirmations are sometimes slow.</li>
 </ul>
@@ -130,7 +130,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--text);o
 <ul>
 <li><strong>The button is missing.</strong> It only shows for an active devnet payment rule that uses this phone's test agent. Rules for other agents need that agent running separately.</li>
 <li><strong>"Wrong network" or the wallet will not sign.</strong> Check that your wallet is on devnet.</li>
-<li><strong>Phantom says the app's identity could not be verified.</strong> This is expected for the devnet test build. Tap <strong>Connect</strong>.</li>
+<li><strong>Phantom or Solflare stops at the approval.</strong> On this build only the Seeker wallet can approve. Phantom drops the request over a missing field, and Solflare blocks the test domain as a scam site. Both are tracked (issues <a href="https://github.com/Arlencho/veto/issues/410">410</a> and <a href="https://github.com/Arlencho/veto/issues/412">412</a>).</li>
 <li><strong>"That agent address cannot be used for this rule."</strong> Most often you pasted your own wallet in <strong>Agent</strong>. Paste the demo agent address from the section above.</li>
 <li><strong>Your tokens seem to be missing on the explorer.</strong> The link must end in <code>?cluster=devnet</code>. Testnet is a different network. Use <code>https://explorer.solana.com/address/YOUR_ADDRESS?cluster=devnet</code>.</li>
 <li><strong>A request failed.</strong> Check the explorer link before trying again. A sent request can still land.</li>
